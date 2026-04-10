@@ -1,6 +1,4 @@
-package Easy;
-
-import java.util.Arrays;
+package Easy.backup;
 
 public class MissingNumber {
 

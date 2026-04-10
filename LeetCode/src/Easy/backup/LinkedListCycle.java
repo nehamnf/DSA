@@ -1,4 +1,4 @@
-package Easy;
+package Easy.backup;
 
 public class LinkedListCycle {
     static class ListNode {

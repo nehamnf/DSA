@@ -1,4 +1,4 @@
-package linkedList;
+package linkedList.singlycircularlist;
 
 public class Node {
     private int data;

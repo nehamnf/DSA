@@ -1,4 +1,4 @@
-package linkedList;
+package linkedList.singlylinkedlist;
 
 public class LinkedListOperations {
     public static void main(String[] args) {

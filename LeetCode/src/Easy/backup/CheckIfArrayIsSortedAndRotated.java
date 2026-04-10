@@ -1,4 +1,4 @@
-package Easy;
+package Easy.backup;
 
 public class CheckIfArrayIsSortedAndRotated {
     public static void main(String[] args) {
