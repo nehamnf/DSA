@@ -54,17 +54,64 @@ public class SinglyLinkedList {
             return;
         }
         Node currentNode = head;
-        Node temp=head;
+        Node prevNode=null;
         for(int i=1;i < position;i++){
             if(currentNode == null){
                 System.out.println("Invalid position "+position);
                 return;
             }
-            temp=currentNode;
+            prevNode=currentNode;
             currentNode =currentNode.getNext();
         }
-            temp.setNext(newNode);
+            prevNode.setNext(newNode);
             newNode.setNext(currentNode);
+    }
+
+    public void deleteAtBeginning(){
+        if(head == null){
+            System.out.println("No data is present list is empty");
+            return;
+        }
+        head= head.getNext();
+    }
+
+    public void deleteAtEnd(){
+        if(head == null){
+            System.out.println("No data is present list is empty");
+            return;
+        }
+        if(head.getNext() == null){
+            head = null;
+            return;
+        }
+        Node currentNode= head;
+        while(currentNode.getNext().getNext() != null){
+            currentNode= currentNode.getNext();
+        }
+        currentNode.setNext(null);
+    }
+
+    public void deleteAtPosition(int position){
+        if(head == null){
+            System.out.println("No data is present list is empty");
+            return;
+        }
+        if(position ==1){
+            head = head.getNext();
+            return;
+        }
+
+        Node currentNode =head;
+        int count=1;
+        while(currentNode.getNext() != null && count < position-1){
+            currentNode = currentNode.getNext();
+            count++;
+        }
+        if (currentNode.getNext() == null) {
+            System.out.println("Invalid position: " + position);
+            return;
+        }
+        currentNode.setNext(currentNode.getNext().getNext());
     }
 
     public void display(){
